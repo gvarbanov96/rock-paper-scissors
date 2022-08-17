@@ -8,6 +8,15 @@
 
         //your javascript goes here!
         console.log("Hello")
+        //creates a function that randomly return rock, paper, or scissors
+            //create a function getComputerChoice
+            //randomize which choice is selected
+        let choice = ['Rock', 'Paper', 'Scissors']
+        let randomChoice = choice[Math.floor((Math.random())*choice.length)]
+        function getComputerChoice() {
+            return randomChoice
+        }
+        alert(getComputerChoice())
 
     </script>
 </body>
