@@ -6,8 +6,8 @@
 <body>
     <script>
 
+
         //your javascript goes here!
-        console.log("Hello")
         //creates a function that randomly return rock, paper, or scissors
             //create a function getComputerChoice
             //randomize which choice is selected
@@ -19,8 +19,24 @@
         alert(getComputerChoice())
 
         //ask for player input
+        let playerInput = prompt('Choose: Rock, Paper, or Scissors', );
         //make it so player input is not case sensitive
+        playerInput = playerInput.toUpperCase();
+        let computerSelection = getComputerChoice
+
         //create a win/loss alert
+        function playRound(playerInput, computerSelection) {
+            if ((playerInput == 'ROCK') && (computerSelection == 'Scissors')) {
+                alert('you win!');
+            } else if ((playerInput == 'ROCK') && (computerSelection == 'Paper')){
+                alert('you lose!');
+            } else {
+                alert('its a tie!');
+            }     
+        }
+        playRound();
+        
+    
 
     
 
