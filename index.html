@@ -25,20 +25,19 @@
         //make it so player input is not case sensitive
         playerInput = playerInput.toUpperCase();
         //alert(playerInput)
-        let computerSelection = getComputerChoice.toUpperCase;
+        let computerSelection = getComputerChoice().toUpperCase();
 
         //create a win/loss alert
         function playRound(playerInput, computerSelection) {
-            if (playerInput === computerSelection) {
+            if (playerInput == computerSelection) {
                 return 'tie';
-            } else if (playerInput === 'ROCK' && computerSelection === 'Paper') {
+            } else if (playerInput == 'ROCK' && computerSelection == 'Paper') {
                 return 'you lose!';
-            } else if (playerInput === 'ROCK' && computerSelection === 'Scissors') {
+            } else if (playerInput == 'ROCK' && computerSelection == 'Scissors') {
                 return 'win!';
             }     
         }
-        playRound(playerInput, computerSelection)
-        alert(playRound(playerInput, computerSelection))
+        console.log(playRound(playerInput, computerSelection))
 
         //always 'undefined' result
     
