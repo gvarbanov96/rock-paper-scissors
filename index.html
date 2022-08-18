@@ -38,8 +38,14 @@
 
                 //win/loss/tie instructions and alerts
                 if (playerInput == computerSelection) {
-                    console.log('Tie')
-                }
+                    console.log('It\'s a tir!')
+                } else if ((playerInput == 'ROCK' && computerSelection == 'PAPER') ||
+                 (playerInput == 'PAPER' && computerSelection == 'SCISSORS') || 
+                 (playerInput == 'SCISSORS' && computerSelection == 'ROCK')) {
+                    console.log('You lose!')
+                 } else {
+                    console.log('You win!')
+                 }
 
 
             }
