@@ -6,22 +6,12 @@
 <body>
     <script>
 
-
-        //your javascript goes here!
-        //creates a function that randomly return rock, paper, or scissors
-            //create a function getComputerChoice
-            //randomize which choice is selected
-        let choice = ['Rock', 'Paper', 'Scissors']
-        let randomChoice = choice[Math.floor((Math.random())*choice.length)]
-        function getComputerChoice() {
-            return randomChoice
-        }
-        alert(getComputerChoice());
-
+        alert('Win conditions: Rock beats Scissors, Paper beats Rock, and Scissors beats Paper')
         // 5 game function
         function game() {
             let i = 0
             while (i < 5) {
+                i++
                 //randomizes computer choice
                 let choice = ['Rock', 'Paper', 'Scissors']
                 let randomChoice = choice[Math.floor((Math.random())*choice.length)]
@@ -34,44 +24,26 @@
                 //makes computer choice case-insensitive
                 let computerSelection = getComputerChoice().toUpperCase();
                 //alerts us what the computer chose for this round
-                alert(computerSelection)
+                alert('The computer chose:', computerSelection)
 
                 //win/loss/tie instructions and alerts
                 if (playerInput == computerSelection) {
-                    console.log('It\'s a tir!')
+                    console.log('It\'s a tie!')
+                    alert('Tie')
                 } else if ((playerInput == 'ROCK' && computerSelection == 'PAPER') ||
                  (playerInput == 'PAPER' && computerSelection == 'SCISSORS') || 
                  (playerInput == 'SCISSORS' && computerSelection == 'ROCK')) {
                     console.log('You lose!')
+                    alert('lose')
                  } else {
                     console.log('You win!')
+                    alert('win')
+
                  }
-
-
             }
         }
 
-        //ask for player input
-        let playerInput = prompt('Choose: Rock, Paper, or Scissors', );
-        //make it so player input is not case sensitive
-        playerInput = playerInput.toUpperCase();
-        //alert(playerInput)
-        let computerSelection = getComputerChoice().toUpperCase();
-
-        //create a win/loss alert
-        function playRound(playerInput, computerSelection) {
-            if (playerInput == computerSelection) {
-                return 'tie';
-            } else if (playerInput == 'ROCK' && computerSelection == 'Paper') {
-                return 'you lose!';
-            } else if (playerInput == 'ROCK' && computerSelection == 'Scissors') {
-                return 'win!';
-            }     
-        }
-        console.log(playRound(playerInput, computerSelection))
-    
-
-    
+        console.log(game())
 
     </script>
 </body>
