@@ -18,7 +18,20 @@
         }
         alert(getComputerChoice());
 
-        
+        // 5 game function
+        function game() {
+            let i = 0
+            while (i < 5) {
+                let choice = ['Rock', 'Paper', 'Scissors']
+                let randomChoice = choice[Math.floor((Math.random())*choice.length)]
+                function getComputerChoice() {
+                    return randomChoice
+                }
+                alert(getComputerChoice());
+
+
+            }
+        }
 
         //ask for player input
         let playerInput = prompt('Choose: Rock, Paper, or Scissors', );
@@ -38,8 +51,6 @@
             }     
         }
         console.log(playRound(playerInput, computerSelection))
-
-        //always 'undefined' result
     
 
     
