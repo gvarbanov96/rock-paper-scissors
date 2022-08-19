@@ -6,7 +6,11 @@
 <body>
     <script>
 
-        alert('Win conditions: Rock beats Scissors, Paper beats Rock, and Scissors beats Paper')
+alert('Win conditions: Rock beats Scissors, Paper beats Rock, and Scissors beats Paper')
+        //win/loss/tie counters
+        let playerWins = 0
+        let computerWins = 0
+        let tiedRounds = 0
         // 5 game function
         function game() {
             let i = 0
@@ -24,26 +28,31 @@
                 //makes computer choice case-insensitive
                 let computerSelection = getComputerChoice().toUpperCase();
                 //alerts us what the computer chose for this round
-                alert('The computer chose:', computerSelection)
+                alert('The computer chose: ' + computerSelection)
 
                 //win/loss/tie instructions and alerts
                 if (playerInput == computerSelection) {
-                    console.log('It\'s a tie!')
-                    alert('Tie')
+                    //console.log('It\'s a tie!')
+                    alert('It\'s a tie!')
+                    tiedRounds = tiedRounds + 1
                 } else if ((playerInput == 'ROCK' && computerSelection == 'PAPER') ||
                  (playerInput == 'PAPER' && computerSelection == 'SCISSORS') || 
                  (playerInput == 'SCISSORS' && computerSelection == 'ROCK')) {
-                    console.log('You lose!')
-                    alert('lose')
+                    //console.log('You lose!');
+                    alert('You lose!');
+                    computerWins = computerWins + 1
                  } else {
-                    console.log('You win!')
-                    alert('win')
-
-                 }
+                    //console.log('You win!');
+                    alert('You win!');
+                    playerWins = playerWins + 1
+                 }   
             }
+                console.log('Player Wins: ' + playerWins);
+                console.log('Computer Wins: ' + computerWins);
+                console.log('Ties: ' + tiedRounds)
         }
-
         console.log(game())
+
 
     </script>
 </body>
